@@ -8,7 +8,7 @@ hackerNews.config(function($stateProvider) {
 
   $stateProvider.state('newLink', {
     url: "/newLink",
-    templateUrl: "partials/newLink.html"
+    templateUrl: "partials/newLink.html",
     controller: 'LinksCtrl'
   });
 });

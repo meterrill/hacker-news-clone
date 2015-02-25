@@ -1,4 +1,10 @@
 <h1>Hacker News Clone</h1>
 <h2><a ui-sref="newLink">Submit</a></h2>
 
-<div ui-view></div>
+<div ng-show="allLinks.length">
+  <ul>
+    <li ng-repeat="item in allLinks">
+    <a href="http://{{item.url}}">{{item.title}}</a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,8 @@
+<h2>Add a new link</h2>
+<form ng-submit="LinksFactory.addLink()" class="form-inline" role="form">
+  <div class="form-group">
+    <input type="text" ng-model="LinksFactory.linkTitle" class="form-control" placeholder="Enter Link Title" autofocus>
+    <input type="text" ng-model="LinksFactory.linkUrl" class="form-control" placeholder="Enter Link Url">
+  </div>
+  <button type="submit" class="btn btn-default">Add</button>
+</form>

@@ -9,10 +9,11 @@
 
 <div ng-show="allLinks.length">
   <ul>
-    <li ng-repeat="item in allLinks | orderBy:'voteCounter':true">
-    <a href="http://{{item.url}}">{{item.title}}</a> <button class="btn btn-primary" ng-click="item.upvote()"> Upvote! {{item.voteCounter}} </button>
+    <li ng-repeat="item in allLinks | orderBy:'rankingCounter':true">
+    <a href="http://{{item.url}}">{{item.title}}</a> <button class="btn btn-primary" ng-click="item.upvote()"> Upvote! {{item.voteCounter}} </button> {{item.rankingCounter}}
     </li>
   </ul>
 </div>
 
+<h4><a ng-click="LinksFactory.mostRecent()">Re-sort</a></h4>
 <h3><a ui-sref="home">Return Home</a></h3>

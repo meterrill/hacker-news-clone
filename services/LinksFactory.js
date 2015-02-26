@@ -11,14 +11,9 @@ hackerNews.factory('LinksFactory', function LinksFactory() {
                               this.voteCounter += 1;
                               }
                             });
-    // factory.voteCounter = 0;
     factory.linkTitle = null;
     factory.linkUrl = null;
   };
-
-  // factory.upvote = function() {
-  //     factory.voteCounter += 1;
-  // };
 
   return factory;
 

@@ -9,7 +9,7 @@
 
 <div ng-show="allLinks.length">
   <ul>
-    <li ng-repeat="item in allLinks">
+    <li ng-repeat="item in allLinks | orderBy:'voteCounter':true">
     <a href="http://{{item.url}}">{{item.title}}</a> <button class="btn btn-primary" ng-click="item.upvote()"> Upvote! {{item.voteCounter}} </button>
     </li>
   </ul>

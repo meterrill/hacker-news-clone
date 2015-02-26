@@ -3,7 +3,8 @@ var hackerNews = angular.module('hackerNews', ['ui.router']);
 hackerNews.config(function($stateProvider) {
   $stateProvider.state('home', {
     url: "",
-    templateUrl: "partials/home.html"
+    templateUrl: "partials/home.html",
+    controller: 'LinksCtrl'
   });
 
   $stateProvider.state('newLink', {
@@ -12,7 +13,7 @@ hackerNews.config(function($stateProvider) {
     controller: 'LinksCtrl'
   });
 
-  $stateProvider.state('newLink.comments', {
+  $stateProvider.state('comments', {
     url: "/:linkId",
     templateUrl: "partials/comments.html",
     controller: 'CommentsCtrl'

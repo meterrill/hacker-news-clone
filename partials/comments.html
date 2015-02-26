@@ -1,0 +1,17 @@
+<h4>Comments for {{selectedLink.title}}</h4>
+
+<ul>
+  <li ng-repeat="item in selectedLink.comments">
+    {{item.name}} <br>
+    {{item.comment}}
+  </li>
+</ul>
+
+<h4>Add a comment</h4>
+<form ng-submit="addComment()" class="form-inline" role="form">
+  <div class="form-group">
+    <input type="text" ng-model="userName" class="form-control" placeholder="Enter User Name">
+    <textarea ng-model="comment" class="form-control" rows="4" col="50" placeholder="Enter comment"></textarea>
+  </div>
+  <button type="submit" class="btn btn-info">Submit</button>
+</form>

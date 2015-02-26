@@ -11,4 +11,10 @@ hackerNews.config(function($stateProvider) {
     templateUrl: "partials/newLink.html",
     controller: 'LinksCtrl'
   });
+
+  $stateProvider.state('newLink.comments', {
+    url: "/:linkId",
+    templateUrl: "partials/comments.html",
+    controller: 'CommentsCtrl'
+  });
 });

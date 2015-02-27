@@ -18,4 +18,10 @@ hackerNews.config(function($stateProvider) {
     templateUrl: "partials/comments.html",
     controller: 'CommentsCtrl'
   });
+
+  $stateProvider.state('comments.reply', {
+    url: "/:commentId",
+    templateUrl: "partials/reply.html",
+    controller: 'RepliesCtrl'
+  });
 });

@@ -3,14 +3,21 @@ hackerNews.controller('CommentsCtrl', function CommentsCtrl($scope, $state, $sta
   $scope.addComment = function() {
     $scope.selectedLink.comments.push({name: $scope.userName,
                                       comment: $scope.comment,
+                                      replies: [],
                                       voteCounter: 0,
                                       rankingCounter: 0,
                                       id: $scope.selectedLink.comments.length + 1,
                                       upvote: function() {
                                         this.voteCounter += 1;
                                         this.rankingCounter += 1;
+                                      },
+                                      reply: function(someText) {
+                                        this.replies.push({
+                                          reply: someText
+                                        })
                                       }
                                       });
+
     $scope.userName = null;
     $scope.comment = null;
     $state.go('home');
@@ -23,5 +30,5 @@ hackerNews.controller('CommentsCtrl', function CommentsCtrl($scope, $state, $sta
       }
     });
   }
-  
+
 });

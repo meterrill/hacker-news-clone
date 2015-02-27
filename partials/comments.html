@@ -3,10 +3,19 @@
 <ul>
   <li ng-repeat="item in selectedLink.comments | orderBy:'rankingCounter': true">
     {{item.name}} <br>
-    {{item.comment}} <br>
-    <button ng-click="item.upvote()">Upvote! {{item.voteCounter}}</button>{{item.rankingCounter}}
+    {{item.comment}}<br>
+    <button class="btn btn-primary" ng-click="item.upvote()"><span class="glyphicon glyphicon-sunglasses"></span> {{item.voteCounter}}</button>
+
+    <!-- <input ng-model="reply">
+    <button ng-click="item.reply(reply)">reply</button>
+    <ul>
+      <li ng-repeat="reply in item.replies">
+        {{item.reply}}
+      </li>
+    </ul> -->
   </li>
 </ul>
+
 
 <h4>Add a comment</h4>
 <form ng-submit="addComment()" class="form-inline" role="form">
@@ -16,3 +25,6 @@
   </div>
   <button ng-click="mostRecent()" type="submit" class="btn btn-info">Submit</button>
 </form>
+
+
+<h3><a ui-sref="home">Return Home</a></h3>

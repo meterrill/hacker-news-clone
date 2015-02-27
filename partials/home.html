@@ -5,10 +5,10 @@
   <ul>
     <li ng-repeat="item in allLinks | orderBy:'rankingCounter':true">
       <a href="http://{{item.url}}">{{item.title}}</a>
-      <button class="btn btn-primary" ng-click="item.upvote()"> Upvote! {{item.voteCounter}} </button>
+      <button class="btn btn-primary" ng-click="item.upvote()"><span class="glyphicon glyphicon-sunglasses"></span> {{item.voteCounter}}</button>
       <a ui-sref="comments({ linkId: item.id })">{{item.commentCounter}} comments</a>
     </li>
   </ul>
 </div>
 
-<div ui-view> </div>
+<div ui-view></div>
